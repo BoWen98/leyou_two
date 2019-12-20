@@ -1,0 +1,29 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: search-service
+  rabbitmq:
+    host: 192.168.5.125
+    username: leyou
+    password: leyou
+    virtual-host: /leyou
+  redis:
+    host: 192.168.5.125
+  data:
+    elasticsearch:
+      cluster-name: my-application
+      cluster-nodes: 192.168.5.125:9300
+  jackson:
+    default-property-inclusion: non_null
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    registry-fetch-interval-seconds: 5
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+logging:
+  level:
+    com.leyou.search: debug

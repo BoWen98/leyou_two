@@ -1,0 +1,19 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: auth-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    registry-fetch-interval-seconds: 5
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+ly:
+  jwt:
+    publicFilePath: C:\\Users\\Bowen\\Desktop\\leyou_jwt\\rsa.pub # 公钥地址
+    privateFilePath: C:\\Users\\Bowen\\Desktop\\leyou_jwt\\rsa.pri # 私钥地址
+    expire: 3000 # 过期时间,单位分钟
+    cookieName: LY_TOKEN
